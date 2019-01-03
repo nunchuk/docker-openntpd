@@ -4,7 +4,7 @@ Dockerized NTP Server
 
 ## Usage
 
-##### Build Docker Image
+#### Build Docker Image
 
 ```shell
 $ git clone https://github.com/nunchuk/docker-openntpd.git
@@ -18,7 +18,7 @@ $ nano ntpd.conf
 $ docker build -t openntpd:v1 .
 ```
 
-##### Synchronizing from Public NTP service
+#### Synchronizing from Public NTP service
 
 Force an immediate update
 
@@ -32,7 +32,7 @@ Compare the system clock with the CMOS clock
 
 `$ hwclock -c`
 
-##### Run Container
+#### Run Container
 
 ```shell
 $ docker run --name openntpd -dit --restart always \
@@ -41,7 +41,7 @@ $ docker run --name openntpd -dit --restart always \
   openntpd:v1
 ```
 
-##### Check Service
+#### Check Service
 
 Stats
 
@@ -51,7 +51,7 @@ Logs
 
 `$ docker logs -f openntpd`
 
-##### Other Instance to Verify
+#### Other Instance to Verify
 
 `$ ntpq -p <docker-openntpd-host-ip>`
 
